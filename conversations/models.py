@@ -17,8 +17,12 @@ class Message(core_models.TimeStampModel):
     """ Message Model Definition """
 
     massage = models.TextField()
-    user = models.ForeignKey("users.User", on_delete=models.CASCADE)
-    Conversation = models.ForeignKey("Conversation", on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        "users.User", related_name="conversations", on_delete=models.CASCADE
+    )
+    Conversation = models.ForeignKey(
+        "Conversation", related_name="conversations", on_delete=models.CASCADE
+    )
 
     def __str__(self):
         return f"{self.user} says: {self.massage}"

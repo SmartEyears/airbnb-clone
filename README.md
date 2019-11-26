@@ -37,10 +37,30 @@
 - auto_now: 필드가 Model을 저장할 때 시간기록
   auto_now_add: Model을 생성할 때마다 시간기록
 
-  ######19.11.25 RoomApp
+  ######19.11.24 RoomApp
 
 - Meta class를 이용해 admin패널에 자동으로 붙는 s를 자연스럽게해준다.
 - 그외에도 meta class를 이용해 정렬과 같은 기능을 넣을수 있다.
   자세한건 장고 Documents를 참고
 - ForingnKey를 생성 할 때 string방식을 이용 할 경우 장고가 알아서 어떤 모델을 말하는지 알수있다.
   ex) host = models.ForeignKey("users.User", on_delete=models.CASCADE)
+- apps 마감
+
+######19.11.25 AdminPanel
+
+- admin.py에 list_display 리스트에 여러 요소를 띄우고 list_filter를 이용해 필터를 만든다.
+  search_fields를 이용해 검색기능 추가
+- custom admin funtions에 다양한 옵션 장고 문서 참조
+- QuerySet의 다양한 기능 filter등등
+- room은 user와 외래키로 연결 되있다. user에서는 room과 연결 된 소스를 찾을 수 없다.
+  그러나 장고에서 room_set을 자동으로 만들어줌으로 user에서 room으로도 접근 할 수가 있다.
+
+######19.11.26
+
+- ManyToMany에서 filter_horizontal를 사용한다.
+- python manage.py shell 버블안에서 python
+  dir() 객체의 모든 속성 이름들의 리스트를 반환한다.
+  vars() 주어진 모듈의 최상위 속성들을 리턴한다. 메인 모듈에서 실행하면 globals()와 동일한 동작이된다.
+  globals() 실행 위치에서 현재 모듈의 전역 변수 이름 공간의 사본을 구한다.
+- User.object.all()
+- related_name="0000" 외래키 ManyToMany 연결
