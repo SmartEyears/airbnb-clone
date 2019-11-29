@@ -44,7 +44,6 @@
   자세한건 장고 Documents를 참고
 - ForingnKey를 생성 할 때 string방식을 이용 할 경우 장고가 알아서 어떤 모델을 말하는지 알수있다.
   ex) host = models.ForeignKey("users.User", on_delete=models.CASCADE)
-- apps 마감
 
 ######19.11.25 AdminPanel
 
@@ -57,6 +56,8 @@
 
 ######19.11.26
 
+- apps 마감
+
 - ManyToMany에서 filter_horizontal를 사용한다.
 - python manage.py shell 버블안에서 python
   dir() 객체의 모든 속성 이름들의 리스트를 반환한다.
@@ -64,3 +65,14 @@
   globals() 실행 위치에서 현재 모듈의 전역 변수 이름 공간의 사본을 구한다.
 - User.object.all()
 - related_name="0000" 외래키 ManyToMany 연결
+
+######19.11.28
+
+- Admin 패널
+
+######19.11.29
+
+- 장고 오버라이딩 하는법 #8.7 #8.8 super()
+- terminal로 데이터 입력하는 커멘드 생성하기 #9
+  management폴더 생성 후 \__init.py_ 생성, commands폴더 생성 \_init.py 생성, command.py 생성
+- 커멘드 python manage.py seed_amenities
