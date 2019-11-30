@@ -4,7 +4,7 @@ from rooms.models import Amenity
 
 class Command(BaseCommand):
 
-    help = "이 명령어는 가상 데이터를 만들어 주는 명령어 입니다."
+    help = "이 명령어는 가상 데이터 Amenity를 만들어 주는 명령어 입니다."
 
     def handle(self, *args, **options):
         amenities = [

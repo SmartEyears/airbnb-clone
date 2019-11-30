@@ -6,10 +6,26 @@ class Conversation(core_models.TimeStampModel):
 
     """ Conversation Model Definition """
 
-    participants = models.ManyToManyField("users.User", blank=True)
+    participants = models.ManyToManyField(
+        "users.User", related_name="conversations", blank=True
+    )
 
     def __str__(self):
-        return str(self.created)
+       usernames = []
+       for user in self.participants.all():
+        usernames.append(user.username)
+       return ", ".join(usernames)
+
+
+    def count_messages(self):
+        return self.massage.count()
+
+    count_messages.short_description = "Number of messages"
+
+    def count_participants(self):
+        return self.participants.count()
+
+    count_participants.short_description = "Number of participants"
 
 
 class Message(core_models.TimeStampModel):
@@ -18,10 +34,10 @@ class Message(core_models.TimeStampModel):
 
     massage = models.TextField()
     user = models.ForeignKey(
-        "users.User", related_name="conversations", on_delete=models.CASCADE
+        "users.User", related_name="massage", on_delete=models.CASCADE
     )
-    Conversation = models.ForeignKey(
-        "Conversation", related_name="conversations", on_delete=models.CASCADE
+    conversation = models.ForeignKey(
+        "Conversation", related_name="massage", on_delete=models.CASCADE
     )
 
     def __str__(self):

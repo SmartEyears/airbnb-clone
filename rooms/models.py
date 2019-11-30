@@ -56,7 +56,7 @@ class Photo(core_models.TimeStampModel):
     """ photo Model Definition """
 
     caption = models.CharField(max_length=80)
-    file = models.ImageField()
+    file = models.ImageField(upload_to="room_photos")
     room = models.ForeignKey("Room", related_name="photos", on_delete=models.CASCADE)
 
     def __str__(self):
@@ -92,6 +92,10 @@ class Room(core_models.TimeStampModel):
 
     def __str__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        self.city = str.capitalize(self.city)
+        super().save(*args, **kwargs)
 
     def total_rating(self):
         all_reviews = self.reviews.all()

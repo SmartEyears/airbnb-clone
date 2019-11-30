@@ -68,11 +68,23 @@
 
 ######19.11.28
 
-- Admin 패널
+- Admin 패널 리뷰 평점 평균 계산하기
+- 시간 현재시간하고 비교해서 숙박중인지 아닌지 구분하기
+- 이미지 업로드 관련 #8.3, #8.4
+- 썸네일 추가 #8.5
+- Rooms 디테일에 photos 연결 #8.6
+- 오버라이딩을 이용해 도시이름 저장 시 capitalize해서 저장 #8.8
+  intercept
 
-######19.11.29
+  ######19.11.29
 
 - 장고 오버라이딩 하는법 #8.7 #8.8 super()
 - terminal로 데이터 입력하는 커멘드 생성하기 #9
   management폴더 생성 후 \__init.py_ 생성, commands폴더 생성 \_init.py 생성, command.py 생성
 - 커멘드 python manage.py seed_amenities
+
+######19.11.30
+
+- django_seed 설치 setting.py에 app에 등록하기
+- seed를 이용해 유저 만들기 command 생성 python manage.py seed_users
+-
