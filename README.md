@@ -87,4 +87,8 @@
 
 - django_seed 설치 setting.py에 app에 등록하기
 - seed를 이용해 유저 만들기 command 생성 python manage.py seed_users
+
+######19.12.1
+
+- Room seed_rooms 커맨드 만들기 사진포함한 가상 데이터 생성
 -
