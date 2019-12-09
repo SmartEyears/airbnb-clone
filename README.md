@@ -91,4 +91,16 @@
 ######19.12.1
 
 - Room seed_rooms 커맨드 만들기 사진포함한 가상 데이터 생성
+
+######19.12.3
+
+-.prettierignore 추가 오류 유발
+
+- room view 생성
+
+######19.12.9
+
+- seed 마무리
+- 템플릿 만들기 hearder, footer, base
+- template는 html문서안에서 {{}} {%%} 을 이용해 변수명과 로직을 이용 할 수 있다.
 -
