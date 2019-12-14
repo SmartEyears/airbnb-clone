@@ -103,4 +103,10 @@
 - seed 마무리
 - 템플릿 만들기 hearder, footer, base
 - template는 html문서안에서 {{}} {%%} 을 이용해 변수명과 로직을 이용 할 수 있다.
--
+
+######19.12.15
+
+- Room pagination
+- urls
+- class base view
+- 미리보기
