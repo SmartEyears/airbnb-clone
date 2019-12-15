@@ -107,6 +107,10 @@
 ######19.12.15
 
 - Room pagination
-- urls
+- urls 다시 복습하기
 - class base view
 - 미리보기
+
+######19.12.16
+
+- 검색기능 구현
