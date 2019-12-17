@@ -11,11 +11,10 @@ class Conversation(core_models.TimeStampModel):
     )
 
     def __str__(self):
-       usernames = []
-       for user in self.participants.all():
-        usernames.append(user.username)
-       return ", ".join(usernames)
-
+        usernames = []
+        for user in self.participants.all():
+            usernames.append(user.username)
+        return ", ".join(usernames)
 
     def count_messages(self):
         return self.massage.count()
@@ -34,10 +33,10 @@ class Message(core_models.TimeStampModel):
 
     massage = models.TextField()
     user = models.ForeignKey(
-        "users.User", related_name="massage", on_delete=models.CASCADE
+        "users.User", related_name="massage", on_delete=models.CASCADE, null=True
     )
     conversation = models.ForeignKey(
-        "Conversation", related_name="massage", on_delete=models.CASCADE
+        "Conversation", related_name="massage", on_delete=models.CASCADE, null=True
     )
 
     def __str__(self):
