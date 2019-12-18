@@ -1,0 +1,19 @@
+{
+  "name": "airbnb-clone",
+  "version": "1.0.0",
+  "description": "- gitignore 셋팅\r - pipenv 설치 및 세팅 (python 3 ,django 2.2.5) 버블\r - django project 생성 (django-admin startproject config)\r - 패키지 설치 : Linter (flack8), Formatter(black) #2.1\r - E501 에러 제거 settings.json(\"python.linting.flake8Args\": [\"--max-line-length==88\"])\r - 장고 서버 구동(python manage.py runserver), 저장시 서버 재실행\r - migrate 이주 시키다. model과 관련 > 이해가 잘 안됨 #2.4\r   https://docs.djangoproject.com/ko/2.2/topics/migrations/ (장고문서migarate)\r - 관리자 생성(createsuperuser)\r - 애플리케이션의 분리가 잘되어야 한다. 기능별로 #2.5\r - 애플리케이션 생성 (djangp-admin startapp 에플리케이션이름)\r - 주의사항: 이름 변경하면 안된다. (장고 프레임워크의 규칙에 위반)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmartEyears/airbnb-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SmartEyears/airbnb-clone/issues"
+  },
+  "homepage": "https://github.com/SmartEyears/airbnb-clone#readme"
+}
